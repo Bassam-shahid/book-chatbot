@@ -1,0 +1,51 @@
+---
+title: "Architecture Patterns for AI Integration"
+chapter: 1
+topic: 2
+---
+
+# Architecture Patterns for AI Integration
+
+## Service-Oriented AI Architecture
+
+The service-oriented approach treats AI capabilities as independent services that can be consumed by various applications. This pattern provides several benefits:
+
+- **Scalability**: AI services can be scaled independently based on demand
+- **Reusability**: Multiple applications can leverage the same AI capabilities
+- **Maintainability**: Updates to AI models don't require changes to consuming applications
+
+### Implementation Considerations
+
+When implementing service-oriented AI architecture, consider:
+
+1. **API Design**: Create clean, well-documented APIs for AI services
+2. **Versioning**: Implement robust versioning strategies for models
+3. **Caching**: Use intelligent caching to improve response times
+4. **Monitoring**: Track model performance and usage patterns
+
+## Pipeline Architecture
+
+For complex AI workflows, pipeline architecture provides a way to chain multiple processing steps together. Each step in the pipeline performs a specific transformation on the data.
+
+### Key Components
+
+- **Data Ingestion**: Collect and validate input data
+- **Preprocessing**: Transform raw data into model-ready format
+- **Model Inference**: Apply trained models to generate predictions
+- **Post-processing**: Format and validate model outputs
+- **Storage**: Persist results and feedback for future learning
+
+## Event-Driven AI Systems
+
+Event-driven architectures are well-suited for AI systems that need to respond to real-time data streams. Events trigger AI processing workflows, enabling reactive and adaptive behavior.
+
+### Benefits
+
+- **Real-time Processing**: Can respond immediately to new data
+- **Decoupling**: Components can evolve independently
+- **Scalability**: Can handle variable loads efficiently
+- **Resilience**: Failures in one component don't necessarily affect others
+
+## Hybrid Approaches
+
+Most production AI systems use hybrid approaches that combine multiple architectural patterns. The key is to choose the right pattern for each specific use case while maintaining overall system coherence.
