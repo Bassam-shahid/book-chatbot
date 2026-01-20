@@ -1,0 +1,90 @@
+/**
+ * Futuristic Dark AI-Themed CSS Modules for Home Page
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: white;
+  margin-bottom: 2.5rem;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+              radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2.5rem 1.5rem;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.7), 0 0 30px rgba(99, 102, 241, 0.5);
+  background: linear-gradient(135deg, #e2e8f0 0%, #c7d2fe 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.bookPreview {
+  padding: 3.5rem 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.featureCard {
+  background: var(--ifm-card-background-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 16px;
+  transition: all 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 10px rgba(139, 92, 246, 0.1);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.3), 0 0 20px rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .bookPreview {
+  background: rgba(15, 23, 42, 0.7);
+}

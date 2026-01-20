@@ -1,0 +1,174 @@
+.bookToc {
+  position: sticky;
+  top: 20px;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding-right: 1rem;
+  border-right: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.chapterList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chapterItem {
+  margin-bottom: 1rem;
+}
+
+.chapterTitle {
+  background: none;
+  border: none;
+  color: var(--ifm-heading-color);
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.chapterTitle:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.chapterTitle.active {
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.topicList {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.topicItem {
+  margin-bottom: 0.5rem;
+}
+
+.topicTitle {
+  background: none;
+  border: none;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.topicTitle:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.topicTitle.active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background-color: var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  margin-left: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.bookContent {
+  padding: 2rem 0;
+}
+
+.topicHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.topicContent {
+  line-height: 1.8;
+}
+
+.topicContent h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.topicContent h2 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.topicContent h3 {
+  font-size: 1.25rem;
+  margin: 1.25rem 0 0.75rem 0;
+}
+
+.topicContent p {
+  margin-bottom: 1rem;
+}
+
+.topicContent ul, .topicContent ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.topicContent li {
+  margin-bottom: 0.5rem;
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .bookToc {
+  border-right: 1px solid var(--ifm-color-emphasis-300);
+}
+
+html[data-theme='dark'] .progressContainer {
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* Responsive design */
+@media (max-width: 996px) {
+  .bookToc {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .progressContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .progressText {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
