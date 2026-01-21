@@ -54,7 +54,7 @@ const config: Config = {
           routeBasePath: '/book', // Docs will be served at /book/*
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Bassam-shahid/book-chatbot/edit/main/my-website/',
         },
         blog: false, // Disable blog since we're focusing on book content
         theme: {
@@ -84,7 +84,7 @@ const config: Config = {
         {to: '/book', label: 'Book', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/Bassam-shahid/book-chatbot',
           label: 'GitHub',
           position: 'right',
         },
