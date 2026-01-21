@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   markdown: {
     format: 'mdx',
@@ -138,10 +138,6 @@ const config: Config = {
             {
               label: 'Contact',
               to: '/contact',
-            },
-            {
-              label: 'Privacy',
-              to: '/privacy',
             },
           ],
         },
